@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const bundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   mode: "development",
@@ -64,5 +65,6 @@ module.exports = {
       //template to use, so we can change html from root
       template: "src/template.html",
     }),
+    new bundleAnalyzerPlugin(),
   ],
 };

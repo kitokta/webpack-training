@@ -13,6 +13,8 @@ module.exports = {
     filename: "[name][contenthash].js",
     //it will not bundle a lot of files with different hashnames
     clean: true,
+    //mantaining the file name + ext for imgs in assets to dist
+    assetModuleFilename: '[name][ext]',
   },
   //Enabling sourcemap for debugging
   devtool: "source-map",
@@ -48,6 +50,11 @@ module.exports = {
           },
         },
       },
+      //load images
+      {
+        test:/\.(png|svg|jpeg|jpg|gif)$/i,
+        type: 'asset/resource',
+      }
     ],
   },
   plugins: [

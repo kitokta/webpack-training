@@ -12,6 +12,18 @@ module.exports = {
     //contenthash so everytime the file is changed the hash changes too, it helps with cache
     filename: '[name][contenthash].js'
   },
+  devServer: {
+    static: {
+        directory: path.resolve(__dirname, 'dist')
+    },
+    port: 3000,
+    //open nav wen npm run dev
+    open: true,
+    //hot reloading true
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
   //loaders config
   module: {
     rules: [

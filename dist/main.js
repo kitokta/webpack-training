@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("É pavê ou pacomê?")})();

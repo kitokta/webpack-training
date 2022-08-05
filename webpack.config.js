@@ -24,6 +24,8 @@ module.exports = {
     new HtmlWebpackPlugin({
         title: 'Webpack Training',
         filename: 'index.html',
+        //template to use, so we can change html from root
+        template: 'src/template.html',
     }),
   ]
 };

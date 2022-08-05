@@ -9,7 +9,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     //[name] refers to entry.bundle
-    filename: '[name].js'
+    //contenthash so everytime the file is changed the hash changes too, it helps with cache
+    filename: '[name][contenthash].js'
   },
   //loaders config
   module: {
